@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
 
-set(PICO_SDK_PATH ${CMAKE_CURRENT_LIST_DIR}/../pico-sdk)
 include(pico_sdk_import.cmake)
 
 set(project_name "fatfs_test")
