@@ -110,12 +110,12 @@ void init_spi(void)
 	gpio_set_function(PIN_SPI0_SCK, GPIO_FUNC_SPI);
 
 	gpio_init(PIN_SPI0_MISO);
-	//gpio_pull_up(PIN_SPI0_MISO);
+	gpio_pull_up(PIN_SPI0_MISO);
 	//gpio_set_schmitt(PIN_SPI0_MISO, 1); // 0: Off, 1: On (default)
 	gpio_set_function(PIN_SPI0_MISO, GPIO_FUNC_SPI);
 
 	gpio_init(PIN_SPI0_MOSI);
-	//gpio_pull_up(PIN_SPI0_MOSI);
+	gpio_pull_up(PIN_SPI0_MOSI);
 	//gpio_set_drive_strength(PIN_SPI0_MOSI, PADS_BANK0_GPIO0_DRIVE_VALUE_4MA); // 2mA, 4mA (default), 8mA, 12mA
 	//gpio_set_slew_rate(PIN_SPI0_MOSI, 0); // 0: SLOW (default), 1: FAST
 	gpio_set_function(PIN_SPI0_MOSI, GPIO_FUNC_SPI);
