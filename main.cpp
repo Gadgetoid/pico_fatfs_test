@@ -113,6 +113,16 @@ int main()
     }
     printf("Card size: %7.2f GB (GB = 1E9 bytes)\n\n", fs.csize * fs.n_fatent * 512E-9);
 
+
+    FILINFO file;
+    auto dir = new DIR();
+    printf("Listing /\n");
+    f_opendir(dir, "/");
+    while(f_readdir(dir, &file) == FR_OK && file.fname[0]) {
+        printf("%s %d\n", file.fname, file.fsize);
+    }
+    f_closedir(dir);
+
 #if 0
     // Print CID
     BYTE cid[16];
